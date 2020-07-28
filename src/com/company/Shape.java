@@ -1,10 +1,23 @@
 package com.company;
 
-public abstract class Shape {
-    String color;
+import java.text.DecimalFormat;
 
-    public Shape(String color) {
+public class Shape {
+    String color;
+    double area;
+    DecimalFormat df = new DecimalFormat("0.00");
+
+    public Shape(String color, double area) {
         this.color = color;
+        this.area = area;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
     }
 
     public String getColor() {
@@ -15,5 +28,7 @@ public abstract class Shape {
         this.color = color;
     }
 
-    abstract public double getArea();
+    public void draw() {
+        System.out.println(toString());
+    }
 }

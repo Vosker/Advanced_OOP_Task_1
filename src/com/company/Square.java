@@ -1,31 +1,21 @@
 package com.company;
 
 public class Square extends Shape {
-    double sizeSide;
 
-    public Square(String color, double sizeSide) {
-        super(color);
-        this.sizeSide = sizeSide;
+    public Square(String color, double area) {
+        super(color, area);
     }
 
-    public double getSizeSide() {
-        return sizeSide;
-    }
-
-    public void setSizeSide(double sizeSide) {
-        this.sizeSide = sizeSide;
-    }
-
-    @Override
-    public double getArea() {
-        return getSizeSide()*getSizeSide();
+    private double getSquareSideSize() {
+        return Math.sqrt(getArea());
     }
 
     @Override
     public String toString() {
-        return "Square{" +
-                "sizeSide=" + getArea() +
-                ", color='" + color + '\'' +
-                '}';
+        return "Shape: Square, color: " +
+                color +
+                ", area = " + area +
+                ", side size: " + df.format(getSquareSideSize());
     }
 }
+
