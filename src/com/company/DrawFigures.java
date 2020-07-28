@@ -5,10 +5,6 @@ import java.text.DecimalFormat;
 public class DrawFigures {
     public static void main(String[] args) {
         String[] availableColors = {"Green", "Blue", "Red", "Fioletoviy_Pizdec"};
-//        Square square = new Square(availableColors[0],25);
-//        Circle circle = new Circle(availableColors[1], 25);
-//        Triangle triangle = new Triangle(availableColors[2],25,4);
-//        Trapezoid trapezoid = new Trapezoid(availableColors[3],30,7,2);
         int amountOfShapes = (int) (Math.random() * 10);
         for (int i = 0; i < amountOfShapes; i++) {
             int shapeNumber = (int) (Math.random() * 4);
@@ -37,10 +33,6 @@ public class DrawFigures {
                     break;
             }
         }
-//       square.draw();
-//       triangle.draw();
-//       circle.draw();
-//       trapezoid.draw();
     }
 
 }
