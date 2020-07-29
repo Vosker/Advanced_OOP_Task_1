@@ -1,36 +1,34 @@
 package com.company;
 
 public class Trapezoid extends Shape {
-    private double upperSide, lowerSide;
+    private double sidesAverage;
+    private double height;
 
-    public Trapezoid(String color, double area, double upperSide, double lowerSide, String nameOfTHeShape) {
-        super(color, area, nameOfTHeShape);
-        this.upperSide = upperSide;
-        this.lowerSide = lowerSide;
+    public Trapezoid(String color, double height, double sidesAverage, String nameOfTHeShape) {
+        super(color, nameOfTHeShape);
+        this.sidesAverage = sidesAverage;
+        this.height = height;
     }
 
-    public double getUpperSide() {
-        return upperSide;
+    public double getHeight() {
+        return height;
     }
 
-    public void setUpperSide(double upperSide) {
-        this.upperSide = upperSide;
+    public double getSidesAverage() {
+        return sidesAverage;
     }
 
-    public double getLowerSide() {
-        return lowerSide;
+    public void setSidesAverage(double sidesAverage) {
+        this.sidesAverage = sidesAverage;
     }
 
-    public void setLowerSide(double lowerSide) {
-        this.lowerSide = lowerSide;
-    }
-
-    private double getTrapezoidHeight() {
-        return getArea() * 2 / (getLowerSide() + getUpperSide());
+    private double getTrapezoidArea() {
+        return (getSidesAverage()) / 2 * getHeight();
     }
 
     @Override
     public String toString() {
-        return ", trapezoid height size: " + df.format(getTrapezoidHeight());
+        return only2DigitsAfterDot.format(getTrapezoidArea()) +
+                ", trapezoid height size: " + only2DigitsAfterDot.format(getHeight());
     }
 }

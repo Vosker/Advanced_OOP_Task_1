@@ -4,26 +4,16 @@ import java.text.DecimalFormat;
 
 public class Shape {
     private String color;
-    private double area;
     private String nameOfTheShape;
-    DecimalFormat df = new DecimalFormat("0.00");
+    public DecimalFormat only2DigitsAfterDot = new DecimalFormat("0.00");
 
-    public Shape(String color, double area, String nameOfTHeShape) {
+    public Shape(String color, String nameOfTHeShape) {
         this.color = color;
-        this.area = area;
         this.nameOfTheShape = nameOfTHeShape;
     }
 
     public String getNameOfTheShape() {
         return nameOfTheShape;
-    }
-
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
     }
 
     public String getColor() {
@@ -35,8 +25,8 @@ public class Shape {
     }
 
     public void draw() {
-        System.out.println("Shape: " + getNameOfTheShape()
-                + ", color: " + getColor() +
-                ", area = " + df.format(getArea()) + toString());
+        System.out.println("Shape: " + getNameOfTheShape() +
+                ", color: " + getColor() +
+                ", area = " + toString());
     }
 }
