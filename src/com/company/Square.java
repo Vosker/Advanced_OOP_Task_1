@@ -12,7 +12,7 @@ public class Square extends Shape {
 
     @Override
     public String toString() {
-        return ", side size: " + df.format(getSquareSideSize());
+        return " , side size: " + df.format(getSquareSideSize());
     }
 }
 
