@@ -37,6 +37,6 @@ public class Shape {
     public void draw() {
         System.out.println("Shape: " + getNameOfTheShape()
                 + ", color: " + getColor() +
-                ", area = " + getArea() + toString());
+                ", area = " + df.format(getArea()) + toString());
     }
 }
