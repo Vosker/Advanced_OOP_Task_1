@@ -13,8 +13,8 @@ public class Square extends Shape {
     @Override
     public String toString() {
         return "Shape: Square, color: " +
-                color +
-                ", area = " + area +
+                getColor() +
+                ", area = " + getArea() +
                 ", side size: " + df.format(getSquareSideSize());
     }
 }

@@ -1,7 +1,7 @@
 package com.company;
 
 public class Triangle extends Shape {
-    double Leg;
+    private double Leg;
 
     public Triangle(String color, double area, double Leg) {
         super(color, area);
@@ -27,8 +27,8 @@ public class Triangle extends Shape {
     @Override
     public String toString() {
         return "Shape: Triangle, color: " +
-                color +
-                ", area = " + area +
+                getColor() +
+                ", area = " + getArea() +
                 ", hypotenuse size: " + df.format(getHypotenuseSize());
     }
 }

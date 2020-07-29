@@ -3,8 +3,8 @@ package com.company;
 import java.text.DecimalFormat;
 
 public class Shape {
-    String color;
-    double area;
+    private String color;
+    private double area;
     DecimalFormat df = new DecimalFormat("0.00");
 
     public Shape(String color, double area) {
