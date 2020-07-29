@@ -5,11 +5,17 @@ import java.text.DecimalFormat;
 public class Shape {
     private String color;
     private double area;
+    private String nameOfTheShape;
     DecimalFormat df = new DecimalFormat("0.00");
 
-    public Shape(String color, double area) {
+    public Shape(String color, double area, String nameOfTHeShape) {
         this.color = color;
         this.area = area;
+        this.nameOfTheShape = nameOfTHeShape;
+    }
+
+    public String getNameOfTheShape() {
+        return nameOfTheShape;
     }
 
     public double getArea() {
@@ -29,6 +35,8 @@ public class Shape {
     }
 
     public void draw() {
-        System.out.println(toString());
+        System.out.println("Shape: " + getNameOfTheShape()
+                + ", color: " + getColor() +
+                ", area = " + getArea() + toString());
     }
 }

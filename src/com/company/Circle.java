@@ -2,8 +2,8 @@ package com.company;
 
 public class Circle extends Shape {
 
-    public Circle(String color, double area) {
-        super(color, area);
+    public Circle(String color, double area, String nameOfTHeShape) {
+        super(color, area, nameOfTHeShape);
     }
 
     private double getRadiusSize() {
@@ -12,9 +12,6 @@ public class Circle extends Shape {
 
     @Override
     public String toString() {
-        return "Shape: Circle, color: " +
-                getColor() +
-                ", area = " + getClass() +
-                ", radius size: " + df.format(getRadiusSize());
+        return ", radius size: " + df.format(getRadiusSize());
     }
 }

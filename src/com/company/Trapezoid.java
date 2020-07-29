@@ -3,8 +3,8 @@ package com.company;
 public class Trapezoid extends Shape {
     private double upperSide, lowerSide;
 
-    public Trapezoid(String color, double area, double upperSide, double lowerSide) {
-        super(color, area);
+    public Trapezoid(String color, double area, double upperSide, double lowerSide, String nameOfTHeShape) {
+        super(color, area, nameOfTHeShape);
         this.upperSide = upperSide;
         this.lowerSide = lowerSide;
     }
@@ -31,9 +31,6 @@ public class Trapezoid extends Shape {
 
     @Override
     public String toString() {
-        return "Shape: Trapezoid, color: " +
-                getColor() +
-                ", area = " + getArea() +
-                ", trapezoid height size: " + df.format(getTrapezoidHeight());
+        return ", trapezoid height size: " + df.format(getTrapezoidHeight());
     }
 }

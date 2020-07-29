@@ -3,8 +3,8 @@ package com.company;
 public class Triangle extends Shape {
     private double Leg;
 
-    public Triangle(String color, double area, double Leg) {
-        super(color, area);
+    public Triangle(String color, double area, double Leg, String nameOfTHeShape) {
+        super(color, area, nameOfTHeShape);
         this.Leg = Leg;
     }
 
@@ -26,9 +26,6 @@ public class Triangle extends Shape {
 
     @Override
     public String toString() {
-        return "Shape: Triangle, color: " +
-                getColor() +
-                ", area = " + getArea() +
-                ", hypotenuse size: " + df.format(getHypotenuseSize());
+        return ", hypotenuse size: " + df.format(getHypotenuseSize());
     }
 }
